@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
-//import { Bars } from './NavBars/Bars'
 import logo from './assets/Trello.jpg'
 
 const Navbar = () => {
