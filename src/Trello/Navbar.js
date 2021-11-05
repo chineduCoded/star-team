@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { AiOutlineMenu } from 'react-icons/ai'
+//import { Bars } from './NavBars/Bars'
 import logo from './assets/Trello.jpg'
 
 const Navbar = () => {
- const [isOpen, setIsOpen] = useState(false)
 
  return(
  <Container>
@@ -13,10 +12,7 @@ const Navbar = () => {
    <LogoHolder>
       <Logo src={logo} />
    </LogoHolder>
-   <Hamburger>
-	 <span><AiOutlineMenu /></span>
-   </Hamburger>
-
+   
    <Navigation>
       <MenuLink>Log In</MenuLink>
       <ButtonLink>Sign up</ButtonLink>
@@ -72,9 +68,8 @@ display: flex;
 align-items: center;
 margin-right: 20px;
 
-
-@media screen  (max-width: 768px) {                display: none;                                   }
 `
+
 const LogoHolder = styled.div`
 display: flex;
 align-items: center;
@@ -84,51 +79,10 @@ margin-left: 20px;
 const Logo = styled.img`
 
 width: 130px;
-  height: 30px;
-  object-fit: contain;
-
-  @media screen (max-width: 768px) {
-   width: 100px;
-`
-
-const Menu = styled.div`
-display: flex;
-align-items: center;
-margin-right: 10px;
-//position: relative;
-
-//@media (max-width: 768px) {
- //overflow: hidden;
- //display: flex;
- //align-items: center;
- //justify-content: center;
-// flex-direction: column;
-// max-height: ${({ isOpen }) => (isOpen ? "200px" : "0px")};
-  
-
-
- //transition: max-height 0.3s ease-in;
- //width: 100%;
-}
-`
-
-const Hamburger = styled.span`
 height: 40px;
-width: 25px;
-display: none;
-align-items: center; 
-color: #0051cc;
-text-align: center
-font-size: 40px;
-border-radius: 3px;
-:hover {
-cursor: pointer;
-}
-
-@media screen  (max-width: 768px) {
-display: flex;
-}
+object-fit: contain;
 `
+
 const Wrapper = styled.div`
 width: 100%;
 height: 80px;
@@ -143,5 +97,6 @@ height: 80px;
 background-color: #ECE8FF;
 color: #fff;
 position: fixed;
+z-index: 10;
 `
 
